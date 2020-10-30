@@ -11,10 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('dashboard', 'HomeController@index')->name('home');
+
+Route::post('auth/login', 'CustomLoginController@authLogin')->name('auth.login');
+
+Route::get('login', 'CustomLoginController@showLoginForm')->name('login');
+
+Route::get('returns', 'UploadsController@getFileList')->name('get.files');
+
+Route::post('file/submit', 'UploadsController@submitFile')->name('file.submit');
+
+Route::get('file/submit', 'UploadsController@getFileList');
+
+Route::get('logout', 'CustomLoginController@authLogout')->name('logout');

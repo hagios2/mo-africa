@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
+    <title>BOG | LOGIN</title>
     <!-- Favicon -->
     <link rel="icon" href="{{asset('assets/img/brand/favicon.png')}}" type="image/png">
     <!-- Fonts -->
@@ -55,58 +55,8 @@
                     </div>
                 </div>
             </div>
-{{--            <ul class="navbar-nav mr-auto">--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a href="dashboard.html" class="nav-link">--}}
-{{--                        <span class="nav-link-inner--text">Dashboard</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a href="{{route('login')}}" class="nav-link">--}}
-{{--                        <span class="nav-link-inner--text">Login</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a href="register.html" class="nav-link">--}}
-{{--                        <span class="nav-link-inner--text">Register</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--            </ul>--}}
+
             <hr class="d-lg-none" />
-{{--            <ul class="navbar-nav align-items-lg-center ml-lg-auto">--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link nav-link-icon" href="https://www.facebook.com/creativetim" target="_blank" data-toggle="tooltip" data-original-title="Like us on Facebook">--}}
-{{--                        <i class="fab fa-facebook-square"></i>--}}
-{{--                        <span class="nav-link-inner--text d-lg-none">Facebook</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link nav-link-icon" href="https://www.instagram.com/creativetimofficial" target="_blank" data-toggle="tooltip" data-original-title="Follow us on Instagram">--}}
-{{--                        <i class="fab fa-instagram"></i>--}}
-{{--                        <span class="nav-link-inner--text d-lg-none">Instagram</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link nav-link-icon" href="https://twitter.com/creativetim" target="_blank" data-toggle="tooltip" data-original-title="Follow us on Twitter">--}}
-{{--                        <i class="fab fa-twitter-square"></i>--}}
-{{--                        <span class="nav-link-inner--text d-lg-none">Twitter</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item">--}}
-{{--                    <a class="nav-link nav-link-icon" href="https://github.com/creativetimofficial" target="_blank" data-toggle="tooltip" data-original-title="Star us on Github">--}}
-{{--                        <i class="fab fa-github"></i>--}}
-{{--                        <span class="nav-link-inner--text d-lg-none">Github</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item d-none d-lg-block ml-lg-4">--}}
-{{--                    <a href="https://www.creative-tim.com/product/argon-dashboard-pro?ref=ad_upgrade_pro" target="_blank" class="btn btn-neutral btn-icon">--}}
-{{--              <span class="btn-inner--icon">--}}
-{{--                <i class="fas fa-shopping-cart mr-2"></i>--}}
-{{--              </span>--}}
-{{--                        <span class="nav-link-inner--text">Upgrade to PRO</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--            </ul>--}}
         </div>
     </div>
 </nav>
@@ -117,10 +67,6 @@
         <div class="container">
             <div class="header-body text-center mb-7">
                 <div class="row justify-content-center">
-{{--                    <div class="col-xl-5 col-lg-6 col-md-8 px-5">--}}
-{{--                        <h1 class="text-white">Welcome!</h1>--}}
-{{--                        <p class="text-lead text-white">Use these awesome forms to login or create new account in your project for free.</p>--}}
-{{--                    </div>--}}
                 </div>
             </div>
         </div>
@@ -135,30 +81,19 @@
         <div class="row justify-content-center">
             <div class="col-lg-5 col-md-7">
                 <div class="card bg-secondary border-0 mb-0">
-{{--                    <div class="card-header bg-transparent pb-5">--}}
-{{--                        <div class="text-muted text-center mt-2 mb-3"><small>Sign in with</small></div>--}}
-{{--                        <div class="btn-wrapper text-center">--}}
-{{--                            <a href="#" class="btn btn-neutral btn-icon">--}}
-{{--                                <span class="btn-inner--icon"><img src="{{asset('assets/img/icons/common/github.svg')}}"></span>--}}
-{{--                                <span class="btn-inner--text">Github</span>--}}
-{{--                            </a>--}}
-{{--                            <a href="#" class="btn btn-neutral btn-icon">--}}
-{{--                                <span class="btn-inner--icon"><img src="{{asset('assets/img/icons/common/google.svg')}}"></span>--}}
-{{--                                <span class="btn-inner--text">Google</span>--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
                     <div class="card-body px-lg-5 py-lg-5">
+                        @include('includes.errorrs')
                         <div class="text-center text-muted mb-4">
                             <small>Or sign in with credentials</small>
                         </div>
-                        <form role="form">
+                        <form role="form" method="POST" action="{{route('auth.login')}}">
+                            @csrf
                             <div class="form-group mb-3">
                                 <div class="input-group input-group-merge input-group-alternative">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                     </div>
-                                    <input class="form-control" placeholder="Email" type="email">
+                                    <input class="form-control" placeholder="Email" name="username" type="email" value="{{old('username')}}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -166,7 +101,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                     </div>
-                                    <input class="form-control" placeholder="Password" type="password">
+                                    <input class="form-control" name="password" placeholder="Password" type="password">
                                 </div>
                             </div>
                             <div class="custom-control custom-control-alternative custom-checkbox">
@@ -176,7 +111,7 @@
                                 </label>
                             </div>
                             <div class="text-center">
-                                <button type="button" class="btn btn-primary my-4">Sign in</button>
+                                <button type="submit" class="btn btn-primary my-4">Sign in</button>
                             </div>
                         </form>
                     </div>
