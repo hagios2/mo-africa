@@ -24,7 +24,7 @@
     <meta name="author" content="Creative Tim">
     <title>BOG</title>
     <!-- Favicon -->
-    <link rel="icon" href="{{asset('assets/img/brand/favicon.png')}}" type="image/png">
+    <link rel="icon" href="{{asset('assets/img/ban.jpg')}}" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
