@@ -33,9 +33,9 @@
 <!-- Navbar -->
 <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="dashboard.html">
-            <img src="{{asset('assets/img/brand/white.png')}}">
-        </a>
+{{--        <a class="navbar-brand" href="dashboard.html">--}}
+{{--            <img src="{{asset('assets/img/ban.jpg')}}">--}}
+{{--        </a>--}}
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,7 +44,7 @@
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a href="dashboard.html">
-                            <img src="{{asset('assets/img/brand/blue.png')}}">
+{{--                            <img src="{{asset('assets/img/ban.jpg')}}">--}}
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
@@ -134,25 +134,25 @@
         <div class="row align-items-center justify-content-xl-between">
             <div class="col-xl-6">
                 <div class="copyright text-center text-xl-left text-muted">
-                    &copy; 2020 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Bank of Ghana</a>
+                    &copy; 2020 <a href="{{route('home')}}" class="font-weight-bold ml-1" target="_blank">Bank of Ghana</a>
                 </div>
             </div>
-            <div class="col-xl-6">
-                <ul class="nav nav-footer justify-content-center justify-content-xl-end">
-                    <li class="nav-item">
-                        <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-                    </li>
-                </ul>
-            </div>
+{{--            <div class="col-xl-6">--}}
+{{--                <ul class="nav nav-footer justify-content-center justify-content-xl-end">--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>--}}
+{{--                    </li>--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>--}}
+{{--                    </li>--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>--}}
+{{--                    </li>--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
         </div>
     </div>
 </footer>
