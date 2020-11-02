@@ -30,3 +30,8 @@ Route::post('file/submit', 'UploadsController@submitFile')->name('file.submit');
 Route::get('file/submit', 'UploadsController@getFileList');
 
 Route::get('logout', 'CustomLoginController@authLogout')->name('logout');
+
+Route::get('/', function (){
+
+    return redirect()->route('login');
+});

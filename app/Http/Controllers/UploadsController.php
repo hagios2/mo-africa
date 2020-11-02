@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class UploadsController extends Controller
 {
@@ -60,7 +61,7 @@ class UploadsController extends Controller
 
     public function submitFile(Request $request)
     {
-       return $request->validate([
+       $request->validate([
             'file' => 'required|file',
             'file_type_id' => 'required',
             'revisions_id' => 'required',
@@ -97,6 +98,8 @@ class UploadsController extends Controller
         $response = json_decode(curl_exec($curl), true);
 
         curl_close($curl);
+
+        Storage::disk('local')->delete($full_path);
 
         if(is_array($response))
         {
