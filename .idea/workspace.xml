@@ -11,11 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2761644b-2ed5-44fc-8f8e-9a652289c8d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/img/ban.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UploadsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UploadsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/new_login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/new_login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,6 +135,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/auth" />
     </key>
@@ -161,7 +160,7 @@
       <workItem from="1603891310096" duration="11982000" />
       <workItem from="1603966758833" duration="17088000" />
       <workItem from="1604284413033" duration="3970000" />
-      <workItem from="1604316670155" duration="1438000" />
+      <workItem from="1604316670155" duration="2052000" />
     </task>
     <servers />
   </component>

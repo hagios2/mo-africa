@@ -35,3 +35,8 @@ Route::get('/', function (){
 
     return redirect()->route('login');
 });
+
+Route::fallback(function(){
+
+    return redirect()->route('home')->with('info', 'Sorry about that, this route is undefined');
+});
