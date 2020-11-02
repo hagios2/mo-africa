@@ -60,7 +60,7 @@ class UploadsController extends Controller
 
     public function submitFile(Request $request)
     {
-       $request->validate([
+       return $request->validate([
             'file' => 'required|file',
             'file_type_id' => 'required',
             'revisions_id' => 'required',
@@ -80,7 +80,7 @@ class UploadsController extends Controller
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://orassvas.bog.gov.gh:7002/1/returns/$request->revisions_id/submit/$request->file_type_id/upload/true",
+            CURLOPT_URL => "https://orassvas.bog.gov.gh:7002/v1/returns/$request->revisions_id/submit/$request->file_type_id/upload/true",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
@@ -94,20 +94,23 @@ class UploadsController extends Controller
             ),
         ));
 
-        $response = curl_exec($curl);
+        $response = json_decode(curl_exec($curl), true);
 
         curl_close($curl);
 
-        return $response;
-
-
-        if(array_key_exists('Message', $response) && $response['Message'] == 'Authorization has been denied for this request. ')
+        if(is_array($response))
         {
-            return redirect()->route('login')->with('error', $response['Message']);
+            if(array_key_exists('Message', $response) && $response['Message'] == 'Authorization has been denied for this request. ')
+            {
+                return redirect()->route('login')->with('error', $response['Message']);
 
-        }else {
+            }else {
 
-            return $response;
+                return back()->with('error', 'Failed to upload file');
+            }
+        }else{
+
+            return back()->with('success', 'File uploaded successfully');
         }
 
     }

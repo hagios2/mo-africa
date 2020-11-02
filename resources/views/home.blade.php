@@ -35,9 +35,10 @@
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                <a style="display: none;" id="main_id_holder" href="{{$file_type['main_id']}}"></a>
-                                                <a style="display: none;" id="revisions_id_holder" href="{{$file_type['revisions_id']}}"></a>
-                                                <a class="dropdown-item" data-toggle="modal" id="trigger"  data-target="#modal-default" title="{{$file_type['id']}}"> Submit File</a>
+                                                <a class="dropdown-item trigger" data-toggle="modal"  data-target="#modal-default" title="{{$file_type['id']}}"> Submit File
+                                                    <span style="display: none;" class="main_id_holder"  title="{{$file_type['main_id']}}"></span>
+                                                    <span style="display: none;" class="revisions_id_holder" title="{{$file_type['revisions_id']}}"></span>
+                                                </a>
 {{--                                                <a class="dropdown-item" href="#">Another action</a>--}}
 {{--                                                <a class="dropdown-item" href="#">Something else here</a>--}}
                                             </div>
@@ -100,12 +101,16 @@
     <script>
         $(document).ready(function (){
 
-            $('#trigger').click(function(){
+            $('.trigger').click(function(){
 
-                $('#file_type_id').val($('#trigger').attr('title'))
-                $('#revisions_id').val($('#revisions_id_holder').attr('href'))
-                $('#main_id').val($('#main_id_holder').attr('href'))
+                console.log($(this).attr('title'))
+                console.log($(this).children('.revisions_id_holder').attr('title'))
+                console.log($(this).children('.main_id_holder').attr('title'))
 
+
+                $('#file_type_id').val($(this).attr('title'))
+                $('#revisions_id').val($(this).children('.revisions_id_holder').attr('title'))
+                $('#main_id').val($(this).children('.main_id_holder').attr('title'))
             });
 
             $('#form-submit').click(function(){
