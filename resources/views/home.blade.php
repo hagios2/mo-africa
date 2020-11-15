@@ -77,6 +77,8 @@
 
             $('.user_reason').click(function(e){
                 e.preventDefault();
+
+                console.log($(this).children('.div_id').attr('title'))
                 alert($(this).attr('val'))
                let userid = $(this).attr('href');
                 console.log(userid)

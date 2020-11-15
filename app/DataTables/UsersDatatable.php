@@ -43,7 +43,7 @@ class UsersDatatable extends DataTable
             ->addColumn('action', function($query){
 
                 return '<div class="btn-group">'.
-                    '<a title="View Reason For Joining" class="user_reason badge badge-info" style="font-size: 11px;"><span style="display: none" class="div_id"></span><i class="fa fa-eye"></i></a>&emsp;'.
+                    '<a title="View Reason For Joining" href="#" class="user_reason badge badge-info" style="font-size: 11px;"><span style="display: none" title="'.$query->id.'" class="div_id"></span><i class="fa fa-eye"></i></a>&emsp;'.
                     '<a title="Delete User" onclick="return confirm(\'Are you sure you want delete this user?\')" href="'.route('user.delete', $query->id).'"class="badge badge-danger" style="font-size: 11px;"><i class="fa fa-biohazard"></i></a>'.
                     '</div>';
             });
