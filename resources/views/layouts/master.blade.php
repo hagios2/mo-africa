@@ -49,7 +49,7 @@
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand" href="javascript:void(0)">
-                <img src="{{asset('assets/img/ban.jpg')}}" style="width: 4rem; height: 4rem;" class="navbar-brand-img" alt="...">
+                <img src="{{asset('assets/img/ban.jpeg')}}" style="width: 4rem; height: 4rem;" class="navbar-brand-img" alt="...">
             </a>
         </div>
         <div class="navbar-inner">
@@ -289,7 +289,7 @@
             <div class="row align-items-center justify-content-lg-between">
                 <div class="col-lg-6">
                     <div class="copyright text-center  text-lg-left  text-muted">
-                        &copy; 2020 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Mo-Africa</a>
+                        &copy; 2020 <img src="{{asset('assets/img/ban.jpeg')}}" style="width: 4rem; height: 4rem;" class="navbar-brand-img" alt="..."><a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Mo-Africa</a>
                     </div>
                 </div>
 {{--                <div class="col-lg-6">--}}

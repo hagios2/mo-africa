@@ -19,7 +19,7 @@
     <meta name="author" content="Creative Tim">
     <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
     <!-- Favicon -->
-    <link rel="icon" href="{{asset('assets/img/ban.jpg')}}" type="image/png">
+    <link rel="icon" href="{{asset('assets/img/ban.jpeg')}}" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
@@ -131,6 +131,15 @@
                                         <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                     </div>
                                     <input class="form-control" name="phone"  value="{{old('phone')}}" placeholder="Phone" type="phone">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-group input-group-merge input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                    </div>
+                                    <input class="form-control" name="email"  value="{{old('email')}}" placeholder="Phone" type="email">
                                 </div>
                             </div>
 

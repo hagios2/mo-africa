@@ -58,7 +58,8 @@ class RegisterController extends Controller
             'profession' => ['required', 'string', 'max:255'],
             'reason' => ['required', 'string'],
             'dob' => ['required', 'date'],
-            'phone' => ['required', 'numeric'],
+            'phone' => ['required', 'numeric', 'unique:users,phone'],
+            'email' => ['required', 'email', 'unique:users,email'],
         ]);
     }
 
