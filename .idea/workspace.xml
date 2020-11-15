@@ -10,14 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2761644b-2ed5-44fc-8f8e-9a652289c8d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/DataTables/UsersDatatable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/DataTables/UsersDatatable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/new_login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/new_login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="2761644b-2ed5-44fc-8f8e-9a652289c8d9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -188,7 +181,7 @@
       <workItem from="1604316670155" duration="4318000" />
       <workItem from="1604324783563" duration="28000" />
       <workItem from="1604922276014" duration="761000" />
-      <workItem from="1605415811668" duration="25773000" />
+      <workItem from="1605415811668" duration="26114000" />
     </task>
     <servers />
   </component>
