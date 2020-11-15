@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\UsersDatatable;
+use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-//        $this->middleware('auth');
+        $this->middleware('auth:admin');
     }
 
     /**
@@ -26,4 +27,21 @@ class HomeController extends Controller
     {
         return $datatable->render('home');
     }
+
+
+    public function delete(User $user)
+    {
+        $user->delete();
+
+        return back()->with('success', 'User has been Deleted');
+
+    }
+
+    public function userReason(Request $request)
+    {
+        $user = User::find($request->user);
+
+        return response()->json(['reason' => $user->reason]);
+    }
+
 }

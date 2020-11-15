@@ -31,8 +31,11 @@ class UsersDatatable extends DataTable
             ->addColumn('profession', function ($query){
                 return $query->profession;
             })
-            ->addColumn('reason', function ($query){
-                return $query->reason;
+            ->addColumn('code', function ($query){
+                return $query->code;
+            })
+            ->addColumn('phone', function ($query){
+                return $query->phone;
             })
             ->addColumn('created_at', function($query){
                 return Carbon::parse($query->created_at)->format('D, d F Y');
@@ -40,7 +43,8 @@ class UsersDatatable extends DataTable
             ->addColumn('action', function($query){
 
                 return '<div class="btn-group">'.
-                    '<a title="Delete User" href="'.route('user.delete', $query->id).'"class="badge badge-danger" style="font-size: 11px;"><i class="fa fa-remove"></i></a>'.
+                    '<a title="View Reason For Joining" data-toggle="modal"  data-target="#modal-default" href="'.$query->id.'" class=" user_reason badge badge-info" style="font-size: 11px;"><i class="fa fa-eye"></i></a>&emsp;'.
+                    '<a title="Delete User" onclick="return confirm(\'Are you sure you want delete this user?\')" href="'.route('user.delete', $query->id).'"class="badge badge-danger" style="font-size: 11px;"><i class="fa fa-biohazard"></i></a>'.
                     '</div>';
             });
 //            ->rawColumns(['reason']);
@@ -70,13 +74,13 @@ class UsersDatatable extends DataTable
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     ->dom('Bfrtip')
-                    ->orderBy(1)
-                    ->buttons(
-                        Button::make('export'),
-                        Button::make('print'),
-                        Button::make('reset'),
-                        Button::make('reload')
-                    );
+                    ->orderBy(1);
+//                    ->buttons(
+//                        Button::make('export'),
+//                        Button::make('print'),
+//                        Button::make('reset'),
+//                        Button::make('reload')
+//                    );
     }
 
     /**
@@ -88,11 +92,11 @@ class UsersDatatable extends DataTable
     {
         return [
 
+            Column::make('code'),
             Column::make('name'),
             Column::make('age'),
+            Column::make('phone'),
             Column::make('profession'),
-            Column::make('reason')
-                ->width(100),
             Column::make('created_at'),
             Column::computed('action')
                 ->exportable(false)

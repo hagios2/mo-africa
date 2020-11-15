@@ -83,7 +83,7 @@ class RegisterController extends Controller
 
        $msg = "Hello {{$user->name}}, your registration with Mo-Africa was successful. Kindly use {{$code}} as your ID";
 
-        $this->sendSms($user->name, $user->phone, $msg);
+        $sendMsg->sendSms($user->name, $user->phone, $msg);
     }
 
 

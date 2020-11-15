@@ -10,11 +10,13 @@ Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('re
 
 Route::post('auth/register', 'Auth\RegisterController@register')->name('auth.register');
 
-Route::post('user/{user}/register', 'Auth\RegisterController@register')->name('user.delete');
+Route::any('user/{user}/delete', 'HomeController@delete')->name('user.delete');
 
 Route::get('admin/auth/login', 'Auth\LoginController@showLoginForm')->name('login');
 
-Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+Route::get('user/reason', 'HomeController@userReason')->name('user.reason');
+
+Route::get('admin/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/', function (){
 
