@@ -35,6 +35,8 @@
 
     <link href="{{asset('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
 
+    @yield('extra-css')
+
 </head>
 
 <body>
@@ -59,12 +61,13 @@
                         </a>
                     </li>
 
-{{--                    <li class="nav-item">--}}
-{{--                        <a class="nav-link" href="profile.html">--}}
-{{--                            <i class="ni ni-single-02 text-yellow"></i>--}}
-{{--                            <span class="nav-link-text">Profile</span>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{route('home')}}">
+                            <i class="ni ni-tv-2 text-primary"></i>
+                            <span class="nav-link-text">Users</span>
+                        </a>
+                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="{{'logout'}}">
                             <i class="ni ni-send text-dark"></i>

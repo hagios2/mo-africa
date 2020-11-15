@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title>BOG | LOGIN</title>
+    <title> LOGIN</title>
     <!-- Favicon -->
     <link rel="icon" href="{{asset('assets/img/ban.jpg')}}" type="image/png">
     <!-- Fonts -->
@@ -93,7 +93,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                     </div>
-                                    <input class="form-control" placeholder="Email" name="username" type="email" value="{{old('username')}}">
+                                    <input class="form-control" placeholder="Email" name="email" type="email" value="{{old('email')}}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -117,12 +117,6 @@
                     </div>
                 </div>
                 <div class="row mt-3">
-{{--                    <div class="col-6">--}}
-{{--                        <a href="#" class="text-light"><small>Forgot password?</small></a>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-6 text-right">--}}
-{{--                        <a href="#" class="text-light"><small>Create new account</small></a>--}}
-{{--                    </div>--}}
                 </div>
             </div>
         </div>
@@ -137,22 +131,6 @@
                     &copy; 2020 <a href="{{route('home')}}" class="font-weight-bold ml-1" target="_blank">Bank of Ghana</a>
                 </div>
             </div>
-{{--            <div class="col-xl-6">--}}
-{{--                <ul class="nav nav-footer justify-content-center justify-content-xl-end">--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>--}}
-{{--                    </li>--}}
-{{--                    <li class="nav-item">--}}
-{{--                        <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>--}}
-{{--                    </li>--}}
-{{--                </ul>--}}
-{{--            </div>--}}
         </div>
     </div>
 </footer>

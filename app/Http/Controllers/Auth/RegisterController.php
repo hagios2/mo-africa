@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -50,8 +52,10 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'profession' => ['required', 'string', 'max:255'],
+            'reason' => ['required', 'string'],
+            'dob' => ['required', 'date'],
+            'phone' => ['required', 'numeric'],
         ]);
     }
 
@@ -63,10 +67,28 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $code = $otp = strtoupper(substr(str_shuffle(str_replace('.', '', uniqid('', true))), 17, 5));
+
+       $user = User::create([
             'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'dob' => $data['dob'],
+            'profession' => $data['profession'],
+            'code' => $code,
+            'phone' => '233'. substr($data['phone'], -9),
+            'reason' => nl2br($data['reason'])
         ]);
+
+       $msg = "Hello {{$user->name}}, your registration with Mo-Africa was successful. Kindly use {{$code}} as your ID";
+
+        $this->sendSms($user->name, $user->phone, $msg);
+    }
+
+
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        event(new Registered($user = $this->create($request->all())));
+        return $this->registered($request, $user)
+            ?: redirect()->back()->with('success', 'Your Details have been saved successfully');
     }
 }

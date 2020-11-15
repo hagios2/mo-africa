@@ -1,41 +1,26 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
 //Auth::routes();
 
-Route::get('dashboard', 'HomeController@index')->name('home');
+Route::get('admin/dashboard', 'HomeController@index')->name('home');
 
-Route::post('auth/login', 'CustomLoginController@authLogin')->name('auth.login');
+Route::post('admin/auth/login', 'Auth\LoginController@authenticate')->name('auth.login');
 
-Route::get('login', 'CustomLoginController@showLoginForm')->name('login');
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 
-Route::get('returns', 'UploadsController@getFileList')->name('get.files');
+Route::post('auth/register', 'Auth\RegisterController@register')->name('auth.register');
 
-Route::post('file/submit', 'UploadsController@submitFile')->name('file.submit');
+Route::post('user/{user}/register', 'Auth\RegisterController@register')->name('user.delete');
 
-Route::get('file/submit', 'UploadsController@getFileList');
+Route::get('admin/auth/login', 'Auth\LoginController@showLoginForm')->name('login');
 
-Route::get('logout', 'CustomLoginController@authLogout')->name('logout');
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/', function (){
 
     return redirect()->route('login');
 });
-
+//
 Route::fallback(function(){
 
     return redirect()->route('home')->with('info', 'Sorry about that, this route is undefined');
