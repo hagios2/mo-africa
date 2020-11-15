@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Services\SendTextMessage;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Auth\Events\Registered;
@@ -67,6 +68,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $sendMsg = new SendTextMessage(env("SMS_USERNAME"), env("SMS_PASSWORD"));
+
         $code = $otp = strtoupper(substr(str_shuffle(str_replace('.', '', uniqid('', true))), 17, 5));
 
        $user = User::create([
