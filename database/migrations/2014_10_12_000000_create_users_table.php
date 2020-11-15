@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('profession');
             $table->string('reason');
             $table->date('dob');
-            $table->string('phone')->unique();
+            $table->string('email')->unique();
             $table->string('code');
             $table->timestamps();
         });
