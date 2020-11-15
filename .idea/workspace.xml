@@ -12,7 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2761644b-2ed5-44fc-8f8e-9a652289c8d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +185,7 @@
       <workItem from="1604316670155" duration="4318000" />
       <workItem from="1604324783563" duration="28000" />
       <workItem from="1604922276014" duration="761000" />
-      <workItem from="1605415811668" duration="28604000" />
+      <workItem from="1605415811668" duration="29715000" />
     </task>
     <servers />
   </component>
@@ -209,10 +209,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="453" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1605449119149" />
-    <state x="447" y="205" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605428230066">
+    <state x="447" y="205" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605456482010">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="447" y="205" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605428230066" />
+    <state x="447" y="205" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605456482010" />
     <state x="430" y="223" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1384.877@0.23.1384.877" timestamp="1603897130645" />
   </component>
 </project>

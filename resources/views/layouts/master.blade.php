@@ -36,6 +36,8 @@
 
     <link href="{{asset('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
 
+{{--    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">--}}
+
     @yield('extra-css')
 
 </head>
@@ -72,7 +74,7 @@
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{'logout'}}">
-                            <i class="ni ni-send text-dark"></i>
+                            <i class="fa fa-f text-dark"></i>
                             <span class="nav-link-text">Logout</span>
                         </a>
                     </li>

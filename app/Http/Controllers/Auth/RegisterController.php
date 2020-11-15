@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Mail\RegisterUsersMail;
 use App\Services\SendTextMessage;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -84,6 +86,8 @@ class RegisterController extends Controller
        $msg = "Hello {{$user->name}}, your registration with Mo-Africa was successful. Kindly use {{$code}} as your ID";
 
         $sendMsg->sendSms($user->name, $user->phone, $msg);
+
+        Mail::to($user)->send(new RegisterUsersMail($user, $code));
     }
 
 
