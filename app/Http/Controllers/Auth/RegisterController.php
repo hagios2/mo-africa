@@ -79,6 +79,7 @@ class RegisterController extends Controller
             'dob' => $data['dob'],
             'profession' => $data['profession'],
             'code' => $code,
+           'email' => $data['email'],
             'phone' => '233'. substr($data['phone'], -9),
             'reason' => nl2br($data['reason'])
         ]);

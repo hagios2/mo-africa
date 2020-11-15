@@ -37,6 +37,9 @@ class UsersDatatable extends DataTable
             ->addColumn('phone', function ($query){
                 return $query->phone;
             })
+            ->addColumn('email', function ($query){
+                return $query->email;
+            })
             ->addColumn('created_at', function($query){
                 return Carbon::parse($query->created_at)->format('D, d F Y');
             })
@@ -96,6 +99,7 @@ class UsersDatatable extends DataTable
             Column::make('name'),
             Column::make('age'),
             Column::make('phone'),
+            Column::make('email'),
             Column::make('profession'),
             Column::make('created_at'),
             Column::computed('action')
