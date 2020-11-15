@@ -11,8 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2761644b-2ed5-44fc-8f8e-9a652289c8d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/img/ban.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +183,7 @@
       <workItem from="1604316670155" duration="4318000" />
       <workItem from="1604324783563" duration="28000" />
       <workItem from="1604922276014" duration="761000" />
-      <workItem from="1605415811668" duration="30727000" />
+      <workItem from="1605415811668" duration="31061000" />
     </task>
     <servers />
   </component>

@@ -139,7 +139,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                     </div>
-                                    <input class="form-control" name="email"  value="{{old('email')}}" placeholder="Phone" type="email">
+                                    <input class="form-control" name="email"  value="{{old('email')}}" placeholder="Email" type="email">
                                 </div>
                             </div>
 
