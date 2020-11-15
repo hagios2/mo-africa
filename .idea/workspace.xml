@@ -10,11 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2761644b-2ed5-44fc-8f8e-9a652289c8d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/DataTables/UsersDatatable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/DataTables/UsersDatatable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="2761644b-2ed5-44fc-8f8e-9a652289c8d9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +181,7 @@
       <workItem from="1604316670155" duration="4318000" />
       <workItem from="1604324783563" duration="28000" />
       <workItem from="1604922276014" duration="761000" />
-      <workItem from="1605415811668" duration="23163000" />
+      <workItem from="1605415811668" duration="23463000" />
     </task>
     <servers />
   </component>
@@ -205,6 +201,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="453" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605449119149">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="453" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1605449119149" />
     <state x="447" y="205" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605428230066">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

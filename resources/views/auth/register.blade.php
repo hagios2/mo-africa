@@ -18,6 +18,9 @@
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
     <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
     <!-- Favicon -->
     <link rel="icon" href="{{asset('assets/img/ban.jpg')}}" type="image/png">
     <!-- Fonts -->
