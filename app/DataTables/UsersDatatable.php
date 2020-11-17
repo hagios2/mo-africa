@@ -4,11 +4,9 @@ namespace App\DataTables;
 
 use App\User;
 use Carbon\Carbon;
-use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Services\DataTable;
-use Yajra\DataTables\Html\Editor\Fields;
-use Yajra\DataTables\Html\Editor\Editor;
+
 
 class UsersDatatable extends DataTable
 {
@@ -46,11 +44,39 @@ class UsersDatatable extends DataTable
             ->addColumn('action', function($query){
 
                 return '<div class="btn-group">'.
-                    '<a title="View Reason For Joining" href="#" class="user_reason badge badge-info" style="font-size: 11px;"><span style="display: none" title="'.$query->id.'" class="div_id"></span><i class="fa fa-eye"></i></a>&emsp;'.
+                    '<a title="View Reason For Joining" data-toggle="modal" data-target="#modal-default"  href="javascipt:void(0)" class="user_reason badge badge-info" style="font-size: 11px;"><span title="'.$query->id.'" class="div_id"></span><i class="fa fa-eye"></i></a>&emsp;'.
                     '<a title="Delete User" onclick="return confirm(\'Are you sure you want delete this user?\')" href="'.route('user.delete', $query->id).'"class="badge badge-danger" style="font-size: 11px;"><i class="fa fa-biohazard"></i></a>'.
-                    '</div>';
+                    '</div>
+
+                        <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
+            <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="modal-title-default">Reason For Joining</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+
+                       <p id="reasons_div" class="">
+
+                            '.$query->reason.'
+                        </p>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-link  ml-auto" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+';
             });
-//            ->rawColumns(['reason']);
     }
 
     /**
@@ -78,12 +104,6 @@ class UsersDatatable extends DataTable
                     ->minifiedAjax()
                     ->dom('Bfrtip')
                     ->orderBy(1);
-//                    ->buttons(
-//                        Button::make('export'),
-//                        Button::make('print'),
-//                        Button::make('reset'),
-//                        Button::make('reload')
-//                    );
     }
 
     /**
