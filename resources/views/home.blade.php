@@ -75,31 +75,6 @@
     <script>
         $(document).ready(function (){
 
-            $('.user_reason').click(function(){
-
-               //  console.log($(this).children('.div_id').attr('title'))
-               //  alert($(this).attr('val'))
-               // let userid = $(this).attr('href');
-               //  console.log(userid)
-               //  fetchReason(userid)
-
-                // ('#modal-default').modal('show');
-            });
-
-            function fetchReason(userID)
-            {
-                console.log(userID)
-                $.ajax({
-                    url: "{{route('user.reason')}}",
-                    dataType: 'json',
-                    method: 'GET',
-                    data: {user: userID},
-                }).done(function (data){
-                    console.log(data.reason);
-
-                    $('#reasons_div').html(data.reason)
-                });
-            }
 
         });
 

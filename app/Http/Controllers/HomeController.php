@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:admin');
+//        $this->middleware('auth:admin');
     }
 
     /**
@@ -39,7 +39,7 @@ class HomeController extends Controller
 
     public function userReason(Request $request)
     {
-        $user = User::find($request->user);
+        return $user = User::find($request->user);
 
         return response()->json(['reason' => $user->reason]);
     }

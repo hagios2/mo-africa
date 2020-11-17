@@ -13,10 +13,9 @@
     <list default="true" id="2761644b-2ed5-44fc-8f8e-9a652289c8d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/DataTables/UsersDatatable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/DataTables/UsersDatatable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/new_login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/new_login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/returns.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +189,7 @@
       <workItem from="1604922276014" duration="761000" />
       <workItem from="1605415811668" duration="31951000" />
       <workItem from="1605467811274" duration="317000" />
-      <workItem from="1605639794892" duration="4281000" />
+      <workItem from="1605639794892" duration="5976000" />
     </task>
     <servers />
   </component>

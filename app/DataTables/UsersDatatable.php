@@ -44,7 +44,7 @@ class UsersDatatable extends DataTable
             ->addColumn('action', function($query){
 
                 return '<div class="btn-group">'.
-                    '<a title="View Reason For Joining" data-toggle="modal" data-target="#modal-default"  href="javascipt:void(0)" class="user_reason badge badge-info" style="font-size: 11px;"><span title="'.$query->id.'" class="div_id"></span><i class="fa fa-eye"></i></a>&emsp;'.
+                    '<a title="View Reason For Joining"  href="javascript:void(0)" class="user_reason badge badge-info" style="font-size: 11px;"><span title="'.$query->id.'" class="div_id"></span><i class="fa fa-eye"></i></a>&emsp;'.
                     '<a title="Delete User" onclick="return confirm(\'Are you sure you want delete this user?\')" href="'.route('user.delete', $query->id).'"class="badge badge-danger" style="font-size: 11px;"><i class="fa fa-biohazard"></i></a>'.
                     '</div>
 
@@ -61,10 +61,7 @@ class UsersDatatable extends DataTable
 
                     <div class="modal-body">
 
-                       <p id="reasons_div" class="">
-
-                            '.$query->reason.'
-                        </p>
+                       <p id="reasons_div" class=""></p>
 
                     </div>
 
@@ -75,7 +72,39 @@ class UsersDatatable extends DataTable
                 </div>
             </div>
         </div>
-';
+
+        <script>
+               $(".user_reason").click(function(){
+
+                console.log($(this).children(".div_id").attr("title"))
+
+                let userid = $(this).children(".div_id").attr("title");
+
+
+                 fetchReason(userid)
+
+
+            });
+
+            function fetchReason(userID)
+            {
+                console.log(userID)
+                $.ajax({
+                    url: "/user/reason",
+                    dataType: "json",
+                    method: "GET",
+                    data: {user: userID},
+                }).done(function (data){
+                    console.log(data);
+
+                    $("#reasons_div").html(data.reason);
+
+                    $("#modal-default").modal("show");
+                });
+    }
+
+        </script>
+        ';
             });
     }
 
